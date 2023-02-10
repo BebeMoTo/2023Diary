@@ -1,0 +1,1063 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    scroll-behavior: smooth;
+}
+html {
+    scroll-padding-top: 50px;
+}
+
+.index-header {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(67,67,67,.4)), url(imagesJan/me.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3% 5%;
+}
+.index-header img {
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgb(83, 83, 83);
+    transition-duration: 500ms;
+    display: block;
+}
+.index-header img:hover {
+    animation: logo 4000ms ease infinite alternate;
+}
+@keyframes logo{
+    0%  {box-shadow: 5px 5px 10px rgb(83, 83, 83);}
+    20%  {box-shadow: 5px 5px 10px rgba(83, 83, 83, 0);}
+    40%  {box-shadow: 5px 5px 10px rgb(83, 83, 83);}
+    60%  {box-shadow: 5px 5px 10px rgba(83, 83, 83, 0);}
+    80%  {box-shadow: 5px 5px 10px rgb(83, 83, 83);}
+    100% {box-shadow: 5px 5px 10px rgba(83, 83, 83, 0);}
+}
+.index-header nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.index-header nav ul {
+    display: flex;
+}
+.index-header nav ul li {
+    list-style-type: none;
+    margin: 0 0 0 30px;
+    padding: 10px 15px;
+}
+.index-header nav ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(239, 224, 185);
+    transition-duration: 300ms;
+}
+.index-header nav ul li a::after {
+    content: '';
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgb(239, 224, 185);
+    transform: scaleX(0);
+    transition-duration: 500ms;
+}
+.index-header nav ul li a:hover {
+    color: rgb(230, 208, 154);
+}
+.index-header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+.textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -40%;
+    text-align: center;
+    z-index: 2;
+}
+.textbox h1 {
+    font-family: 'Roboto Condensed', sans-serif; 
+    font-size: 100px;
+    color: var(--brown1);
+    line-height: 100px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.textbox p {
+    color: var(--brown2);
+    margin-bottom: 5%;
+}
+.index-header button {
+    padding: 2% 5%;
+    border: 2px solid rgb(239, 224, 185);
+    background-color: var(--brown1);
+    color: rgb(239, 224, 185);
+    transition-duration: 500ms;
+    position: relative;
+    top: 100px;
+    border-radius: 30% 70% 25% 75% / 45% 30% 70% 55%;
+}
+.index-header button:hover {
+    border: 2px solid var(--brown1);
+    background-color: rgb(239, 224, 185);
+    color: var(--brown1);
+}
+.index-header svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+@media (max-width: 750px) {
+    .index-header img {
+        width: 100px;
+    }
+    .index-header nav ul {
+        width: 60%;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -60%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 5;
+        transition-duration: 500ms;
+
+        background: rgba( 204, 133, 101, 0.25 );
+        backdrop-filter: blur( 8.5px );
+        -webkit-backdrop-filter: blur( 8.5px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    .textbox h1 {
+        font-size: 70px;
+        letter-spacing: 0px;
+        line-height: 70px;
+        text-align: center;
+        font-weight: 1000;
+    }
+}
+@media (max-width: 850px) {
+    .index-header button {
+        padding: 2% 5%;
+        border: 2px solid rgb(239, 224, 185);
+        background-color: var(--brown1);
+        color: rgb(239, 224, 185);
+        transition-duration: 500ms;
+        position: relative;
+        top: 100px;
+        border-radius: 5px;
+        font-size: 30px;
+    }
+}
+
+/*--------------------INDEX MAIN----------------------------*/
+.index-main {
+    width: 100%;
+    padding: 25% 5% 5% 5%;
+    position: relative;
+}
+.index-main svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.index-main-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+.index-main-about-image {
+    flex-basis: 35%;
+    min-height: 500px;
+    background: url(imagesJan/me1.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 7px outset #efe0b9;;
+}
+.index-main-about-image-desc {
+    flex-basis: 60%;
+}
+.index-main-about-image-desc h2 {
+    font-style: italic;
+    font-size: 75px;
+    margin-bottom: 10%;
+    text-align: center;
+}
+.index-main-about-image-desc p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+.index-main-about-image-desc span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+@media (max-width:1000px) {
+    .index-main-about {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .index-main-about-image {
+        width: 350px;
+        margin-bottom: 3%;
+    }
+}
+.index-main-about-text-seemore {
+    display: none;
+}
+.index-main-about-text-seemore-dots {
+    display: none;
+}
+.index-main-about-text-seemore-dots-close {
+    display: none;
+}
+.index-main-about-text {
+    text-indent: 3rem;
+    font-size: 20px;
+    text-align: justify;
+}
+@media (max-width:500px) {
+    .index-main-about-image-desc h2 {
+        font-size: 50px;
+    }
+    .index-main-about-text {
+        border: #cc8565 3px solid;
+        border-radius: 5px;
+        padding: 5px 10px;
+        max-height: 750px;
+        overflow: hidden;
+        position: relative;
+        transition-duration: 300ms;
+        font-size: 15px;
+    }
+    .index-main-about-text-seemore {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(to top, rgb(204, 133, 101), transparent, transparent);
+        bottom: 0;
+        left: 0;
+    }
+    .index-main-about-text-seemore-dots {
+        display: block;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+        bottom: 0;
+        right: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px 20px;
+        color: beige;
+    }
+    .index-main-about-text-seemore-dots-close {
+        display: none;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+        bottom: 0;
+        right: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 5px 10px;
+        color: #cc8565;
+    }
+}
+.index-divider {
+    background-color: #cc8565;
+    min-height: 10px;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 3px;
+}
+.index-divider1 {
+    width: 100%;
+}
+.index-divider2 {
+    width: 75%;
+}
+.index-divider3 {
+    width: 50%;
+    margin-bottom: 7%;
+}
+
+/*-------------------LIKES and DISLIKES---------------------------------*/
+.likesAndDislikes {
+    position: relative;
+    width: 100%;
+}
+.likesAndDislikes h2 {
+    font-family: 'Roboto Condensed', sans-serif; 
+    text-align: center;
+    font-size: 3rem;
+}
+.likesAndDislikesContainer {
+    width: 100%;
+}
+.likesAndDislikesContainer tr, .likesAndDislikesContainer th, .likesAndDislikesContainer td {
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px 0;
+}
+.likesAndDislikesContainer th {
+    color: #773c20;
+    border: #773c20 3px solid;
+    font-size: 25px;
+}
+.likesAndDislikesContainer td {
+    cursor: pointer;
+}
+.likesAndDislikesContainer tr:not(:nth-child(2)) th {
+    font-size: 1rem;
+    background-color: #e2a285;
+    cursor: pointer;
+    transition-duration: 500ms;
+    position: relative;
+}
+.likesAndDislikesContainer tr:not(:nth-child(2)) th::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 0% -50%;
+    min-height: 80%;
+    width: 5%;
+    background-color: #efe0b9;
+    transition-duration: 500ms;
+}
+.likesAndDislikesContainer tr:not(:nth-child(2)) th:hover {
+    background-color: #773c20;
+    color: #e2a285;
+}
+.likesAndDislikesContainer tr:not(:nth-child(2)) th:hover::before {
+    left: 95%;
+}
+.likesAndDislikesContainer table {
+    width: 100%;
+}
+.likesAndDislikesContainer tr:nth-child(odd) {
+    background-color: #efe0b9;
+}
+
+/*---------------MODAAAAAL-----------------------------*/
+.index-aside {
+    z-index: 5;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg,rgb(119, 60, 32, 1), rgb(163, 110, 85,.9), rgb(199, 178, 168,.8));
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.index-aside h2 {
+    text-align: center;
+    font-family: var(--titleFont);
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 5%;
+}
+.indexAsideContent {
+    width: 90%;
+    border: 5px double #773c20;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -40%;
+}
+.indexAsideContent p {
+    color: black;
+    font-family: var(--contentFont);
+}
+.indexAsideContentMost {
+    flex-basis: 45% ;
+}
+.indexAsideContentLeast {
+    flex-basis: 45%;
+    text-align: right;
+}
+.indexContentPic {
+    width: 300px;
+    height: 300px;
+    border: #efe0b9 5px;
+    border-style: inset;
+    margin: auto;
+    margin-bottom: 5%;
+    background-position: center;
+    background-size: cover;
+}
+@media (max-width:750px) {
+    .indexContentPic {
+        width: 130px;
+        height: 130px;
+    }
+}
+.indexModalClose {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+/*------------------------------Para Saan-------------------------*/
+.indexParaSaan {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    height: 700px;
+    margin-bottom: 350px;
+}
+.indexParaSaanTitle {
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+.paraSaanItoPara {
+    text-indent: 3rem;
+    text-align: justify;
+    margin-bottom: 5%;
+}
+@media (max-width:450px) {
+    .indexParaSaan {
+        margin-bottom: 400px;
+    }
+}
+
+/*-----------------MOOOOOOOOOOOONTHSSSSSSSSSS----------------------*/
+.indexMonths {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10%;
+}
+.indexMonths h2{
+    font-size: 2rem;
+    margin-bottom: 3%;
+}
+.indexMonthContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    isolation: isolate;
+}
+.indexMonthContainer button{
+    display: block;
+    background: none;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+    font-variant: small-caps;
+    font-weight: 800;
+}
+
+@media (min-width:1000px) {
+    .indexMonthContainer button::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        z-index: -5;
+        transition-duration: 500ms;
+
+        transform: scaleX(0);
+    }
+    .indexMonthContainer button:hover::before {
+        transform: scaleX(100%);
+    }
+    .indexMonthContainer button::after {
+        content: '';
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        z-index: -5;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -10;
+        transform: scaley(0);
+    }
+    .indexMonthContainer button:hover::after {
+        transform: scaley(1);
+        transition-duration: 500ms;
+        transition-delay: 200ms;
+    }
+    /*MONTH BACKGROUNDS*/
+    .indexMonthContainer button:first-child::before {
+        background-image: linear-gradient(45deg, rgb(1, 2, 67, .7), rgb(53, 194, 239, .7));
+    }
+    .indexMonthContainer button:first-child::after {
+        background-image: url(indexPic/bubble.gif);
+    }
+    .indexMonthContainer button:nth-child(2)::before {
+        background-image: linear-gradient(45deg,rgb(150, 59, 142,.7), rgb(220, 46, 70,.7), rgb(245, 177, 83,.7));
+    }
+    .indexMonthContainer button:nth-child(2)::after {
+        background-image: url(indexPic/februaryBG.gif);
+    }
+    .indexMonthContainer button:nth-child(3)::before {
+        background-image: linear-gradient(45deg,rgb(80, 186, 128, .7), rgb(149, 208, 157, .7), rgb(191, 207, 197,.7));
+    }
+    .indexMonthContainer button:nth-child(3)::after {
+        background-image: url(indexPic/marchBG.gif);
+    }
+    .indexMonthContainer button:nth-child(4)::before {
+        background-image: linear-gradient(45deg,rgb(216, 198, 163,.7),rgb(229, 213, 194,.7),rgb(232, 232, 232,.7));
+    }
+    .indexMonthContainer button:nth-child(4)::after {
+        background-image: url(indexPic/aprilBG.gif);
+    }
+    .indexMonthContainer button:nth-child(5)::before {
+        background-image: linear-gradient(45deg, rgb(215, 161, 151,.7),rgb(219, 160, 101,.7),rgb(208, 178, 88,.7));
+    }
+    .indexMonthContainer button:nth-child(5)::after {
+        background-image: url(indexPic/mayBG.gif);
+    }
+    .indexMonthContainer button:nth-child(6)::before {
+        background-image: linear-gradient(45deg,rgb(42, 19, 94,.7),rgb(115, 98, 148,.7),rgb(92, 41, 82,.7));
+    }
+    .indexMonthContainer button:nth-child(6)::after {
+        background-image: url(indexPic/juneBG.gif);
+    }
+    .indexMonthContainer button:nth-child(7)::before {
+        background-image: linear-gradient(45deg,rgb(242, 0, 0,.7),rgb(242, 125, 125,.7),rgb(242, 242, 242,.7));
+    }
+    .indexMonthContainer button:nth-child(7)::after {
+        background-image: url(indexPic/julyBG.gif);
+    }
+    .indexMonthContainer button:nth-child(8)::before {
+        background-image: linear-gradient(45deg,rgb(187, 143, 93,.7),rgb(180, 220, 60,.7),rgb(108, 159, 73,.7));
+    }
+    .indexMonthContainer button:nth-child(8)::after {
+        background-image: url(indexPic/augustBG.gif);
+    }
+    .indexMonthContainer button:nth-child(9)::before {
+        background-image: linear-gradient(45deg,rgb(0, 0, 125,.7),rgb(7, 6, 94,.7),rgb(147, 115, 80,.7));
+    }
+    .indexMonthContainer button:nth-child(9)::after {
+        background-image: url(indexPic/septemberBG.gif);
+    }
+    .indexMonthContainer button:nth-child(10)::before {
+        background-image: linear-gradient(45deg,rgb(242, 133, 207,.7),rgb(242, 242, 242,.7),rgb(104, 147, 187,.7));
+    }
+    .indexMonthContainer button:nth-child(10)::after {
+        background-image: url(indexPic/octoberBG.gif);
+    }
+    .indexMonthContainer button:nth-child(11)::before {
+        background-image: linear-gradient(45deg,rgba(88, 88, 88, 0.7),rgba(143, 130, 115, 0.7),rgba(255, 255, 255, 0.7));
+    }
+    .indexMonthContainer button:nth-child(11)::after {
+        background-image: url(indexPic/novemberBG.gif);
+    }
+    .indexMonthContainer button:nth-child(12)::before {
+        background-image: linear-gradient(45deg,rgb(19, 102, 55,.7),rgb(235, 169, 39,.7),rgb(222, 66, 46,.7));
+    }
+    .indexMonthContainer button:nth-child(12)::after {
+        background-image: url(indexPic/decemberBG.gif);
+    }
+}
+@media (max-width:999px) {
+    .indexMonthContainer button:first-child {
+        background-image: linear-gradient(45deg, rgb(1, 2, 67, .7), rgb(53, 194, 239, .7));
+    }
+
+    .indexMonthContainer button:nth-child(2) {
+        background-image: linear-gradient(45deg,rgb(150, 59, 142,.7), rgb(220, 46, 70,.7), rgb(245, 177, 83,.7));
+    }
+
+    .indexMonthContainer button:nth-child(3) {
+        background-image: linear-gradient(45deg,rgb(80, 186, 128, .7), rgb(149, 208, 157, .7), rgb(191, 207, 197,.7));
+    }
+
+    .indexMonthContainer button:nth-child(4) {
+        background-image: linear-gradient(45deg,rgb(216, 198, 163,.7),rgb(229, 213, 194,.7),rgb(232, 232, 232,.7));
+    }
+
+    .indexMonthContainer button:nth-child(5) {
+        background-image: linear-gradient(45deg, rgb(215, 161, 151,.7),rgb(219, 160, 101,.7),rgb(208, 178, 88,.7));
+    }
+
+    .indexMonthContainer button:nth-child(6) {
+        background-image: linear-gradient(45deg,rgb(42, 19, 94,.7),rgb(115, 98, 148,.7),rgb(92, 41, 82,.7));
+    }
+
+    .indexMonthContainer button:nth-child(7) {
+        background-image: linear-gradient(45deg,rgb(242, 0, 0,.7),rgb(242, 125, 125,.7),rgb(242, 242, 242,.7));
+    }
+
+    .indexMonthContainer button:nth-child(8) {
+        background-image: linear-gradient(45deg,rgb(187, 143, 93,.7),rgb(180, 220, 60,.7),rgb(108, 159, 73,.7));
+    }
+
+    .indexMonthContainer button:nth-child(9) {
+        background-image: linear-gradient(45deg,rgb(0, 0, 125,.7),rgb(7, 6, 94,.7),rgb(147, 115, 80,.7));
+    }
+
+    .indexMonthContainer button:nth-child(10) {
+        background-image: linear-gradient(45deg,rgb(242, 133, 207,.7),rgb(242, 242, 242,.7),rgb(104, 147, 187,.7));
+    }
+
+    .indexMonthContainer button:nth-child(11) {
+        background-image: linear-gradient(45deg,rgba(88, 88, 88, 0.7),rgba(143, 130, 115, 0.7),rgba(255, 255, 255, 0.7));
+    }
+
+    .indexMonthContainer button:nth-child(12) {
+        background-image: linear-gradient(45deg,rgb(19, 102, 55,.7),rgb(235, 169, 39,.7),rgb(222, 66, 46,.7));
+    }
+
+}
+/*------------------FOOOOOOOOOOOTEEEEEEEEEER-----------------------*/
+.indexFooter {
+    margin: auto;
+    width: 100%;
+    padding: 2% 5%;
+    background-image: url(indexPic/brownBG1.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 5%;
+}
+.indexFooter h2{
+    font-size: 2rem;
+    margin-bottom: 2%;
+    color: #efe0b9;
+    font-variant: small-caps;
+}
+.indexFooter p {
+    color: #efe0b9;
+    font-family: var(--contentFont);
+    font-size: 20px;
+}
+.indexFooter p a {
+    text-decoration: none;
+    color: #efe0b9;
+}
+.indexFooter span {
+    font-variant: small-caps;
+}
+.indexFooterSocial {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.indexFooterSocialCard {
+    min-width: 350px;
+    flex-basis: 30%;
+    min-height: 200px;
+    position: relative;
+    transition-duration: 500ms;
+}
+.indexFooterSocialCard:nth-child(1) {
+    border-radius: 30% 70% 70% 30% / 30% 70% 30% 70% ;
+    background-image: linear-gradient(45deg, rgb(1, 2, 66), rgb(33, 143, 211));
+}
+.indexFooterSocialCard:nth-child(1):hover i{
+    scale: 1.5;
+    color: rgb(33, 143, 211);
+    cursor: pointer;
+}
+.indexFooterSocialCard:nth-child(2) {
+    border-radius: 85% 15% 78% 22% / 30% 78% 22% 70% ;
+    background-image: linear-gradient(45deg, rgb(79, 139, 222), rgb(70, 164, 113), rgb(217, 183, 37), rgb(227, 102, 62));
+}
+.indexFooterSocialCard:nth-child(2):hover i{
+    scale: 1.5;
+    color: rgb(227, 102, 62);
+    cursor: pointer;
+}
+.indexFooterSocialCard:nth-child(3) {
+    border-radius: 45% 55% 32% 68% / 61% 37% 63% 39% ;
+    background-image: linear-gradient(45deg, rgb(242, 155, 58), rgb(239, 65, 114), rgb(133, 74, 228));
+}
+.indexFooterSocialCard:nth-child(3):hover i{
+    scale: 1.5;
+    color:rgb(133, 74, 228);
+    cursor: pointer;
+}
+.indexFooterSocialCard:nth-child(1):hover {
+    box-shadow: 0px 0px 30px  rgb(33, 143, 211);
+}
+.indexFooterSocialCard:nth-child(2):hover {
+    box-shadow: 0px 0px 30px   rgb(227, 102, 62);
+}
+.indexFooterSocialCard:nth-child(3):hover {
+    box-shadow: 0px 0px 30px  rgb(133, 74, 228);
+}
+@media (max-width: 850px) {
+    .indexFooterSocialCard {
+        min-width: 300px;
+    }
+}
+
+
+
+/*========================JANUARYYYYYY=========================================*/
+/*========================JANUARYYYYYY=========================================*/
+/*========================JANUARYYYYYY=========================================*/
+/*========================JANUARYYYYYY=========================================*/
+/*========================JANUARYYYYYY=========================================*/
+/*========================JANUARYYYYYY=========================================*/
+.januaryHeader {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(-250deg, rgb(0, 0, 0,.5), rgb(0, 34, 51,.5), rgb(18, 137, 163,.5)), url(imagesJan/januaryBG.gif);
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-bottom: 5%;
+}
+@media (min-width:1000px) {
+    .januaryHeaderTextbox {
+        position: absolute;
+        right: 3%;
+        top: 50%;
+        translate: 0 -50%;
+        text-align: right;
+    }
+    .januaryHeaderTextbox h1 {
+        font-size: 4rem;
+        font-variant: small-caps;
+        font-style: italic;
+        background: linear-gradient(250deg, rgb(25, 184, 219), rgb(103, 217, 243));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 0px 1rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .januaryHeaderTextbox h1::after {
+        content: '';
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(250deg, rgb(25, 184, 219), rgb(103, 217, 243));
+        transition-duration: 500ms;
+        transition-timing-function: ease-out;
+        animation: januaryTitleAnimationTop 2s alternate infinite ease;
+    }
+    .januaryHeaderTextbox h1::before {
+        content: '';
+        width: 80%;
+        height: 5px;
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        background: linear-gradient(250deg, rgb(25, 184, 219), rgb(103, 217, 243));
+        transition-delay: 200ms;
+        transition-timing-function: ease-out;
+        animation: januaryTitleAnimationBot 2s alternate infinite ease;
+        animation-delay: 200ms;
+    }
+
+    @keyframes januaryTitleAnimationTop {
+        0% {width: 0};
+        25% {width: 100%};
+        50% {width: 0};
+        75% {width: 100%};
+        100% {width: 0};
+    }
+    @keyframes januaryTitleAnimationBot {
+        0% {width: 0};
+        25% {width: 80%};
+        50% {width: 0};
+        75% {width: 80%};
+        100% {width: 0};
+    }
+    .januaryHeaderTextbox p {
+        color: rgb(103, 217, 243);
+        font-size: 1.2rem;
+        font-variant: small-caps;
+        font-style: oblique;
+    }
+}
+@media (max-width:999px) {
+    .januaryHeader {
+        margin-bottom: 10%;
+    }
+    .januaryHeaderTextbox {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        text-align: center;
+    }
+    .januaryHeaderTextbox h1 {
+        font-size: 6rem;
+        font-variant: small-caps;
+        font-style: italic;
+        background: linear-gradient(250deg, rgb(25, 184, 219), rgb(103, 217, 243));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 0px 1rem;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .januaryHeaderTextbox p {
+        color: rgb(103, 217, 243);
+        font-size: 1.2rem;
+        font-variant: small-caps;
+        font-style: oblique;
+    }
+}
+@media (max-width:400px) {
+    .januaryHeaderTextbox h1 {
+        font-size: 4.5rem;
+    }
+}
+:root {
+    --blue1: rgb(0, 14, 21);
+    --blue2: rgb(0, 34, 51);
+    --blue3: rgb(0, 80, 111);
+    --blue4: rgb(63, 211, 233);
+    --brown1: rgb(222, 214, 135);
+    --brown2: rgb(64, 51, 21);
+    --red1: rgb(255, 102, 102);
+}
+.januaryDayContainer {
+    width: 90%;
+    margin: auto;
+    border-bottom: double 10px var(--blue3);
+}
+.januaryDayContainer h2{
+    font-size: 3rem;
+    background: linear-gradient(125deg, rgb(0, 80, 111), rgb(63, 211, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    font-variant: small-caps;
+    margin-bottom: 3%;
+}
+.januaryDayContainer:nth-child(even) h2 {
+    display: block;
+    text-align: right;
+}
+.januaryDayContainer p {
+    text-align: justify;
+    background: linear-gradient(125deg, rgb(91, 150, 173), rgb(63, 211, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-indent: 3rem;
+    margin-bottom: 3%;
+}
+.january13Music {
+    width: 90%;
+    max-width: 800px;
+    max-height: 100px;
+    margin: auto;
+    margin-bottom: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6% 0;
+    padding-left: 20px;
+
+    border-radius: 23px;
+background: #021b24;
+box-shadow:  35px 35px 70px #011117,
+             -35px -35px 70px #032531;
+}
+@media (max-width: 1000px) {
+    .january13Music {
+    margin-bottom: 10%;
+    }
+}
+@media (max-width: 400px) {
+    .january13Music {
+    margin-bottom: 20%;
+    }
+}
+.january13Music img {
+    width: 55px;
+    display: inline-block;
+    cursor: pointer;
+    flex-basis: 1;
+}
+.musicLineContainer {
+    width: 80%;
+    flex: 1;
+}
+@media (max-width: 400px) {
+    .january13Music img {
+    width: 40px;
+    }
+}
+.songTitleBox {
+
+}
+.songTitleBox h3{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--blue4);
+}
+.songTitleBox p {
+    text-align: center;
+    text-indent: 0;
+}
+
+.butterFly {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--blue1);
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+    left: 50%;
+    translate: -50% 0;
+    margin-bottom: 5%;
+   }
+   
+   .butterFly:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+   }
+   
+   @keyframes ani {
+    0% {
+     background-position: 0%;
+    }
+   
+    100% {
+     background-position: 400%;
+    }
+   }
+   
+   .butterFly:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+   }
+   
+   .butterFly:hover::before {
+    filter: blur(20px);
+   }
+   
+   .butterFly:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+   }
+
+.lyricsBlock {
+    text-align: center;
+    text-indent: 0;
+    display: none;
+    margin-bottom: 5%;
+}
+.lyricsBlock p {
+    text-align: center;
+    text-indent: 0;
+    transform: scaleY(0);
+}
+.lyricsBlock1 {
+    text-align: center;
+    text-indent: 0;
+    display: none;
+    margin-bottom: 5%;
+}
+.lyricsBlock1 p {
+    text-align: center;
+    text-indent: 0;
+    transform: scaleY(0);
+}
+.januaryFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.januaryFooter .card {
+    box-sizing: border-box;
+    width: 190px;
+    height: 254px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+  }
+
+  .januaryFooter a .card p {
+    font-size: 20px;
+    font-variant: small-caps;
+    
+  }
+
+  .januaryFooter a:nth-child(1) .card {
+    background: linear-gradient(45deg, rgb(34, 195, 242), rgb(196, 137, 220));
+    text-decoration: none;
+  }
+  .januaryFooter a:nth-child(2) .card {
+    background: linear-gradient(106deg, rgb(184, 67, 107), rgb(40, 156, 165), rgb(147, 210, 158), rgb(242, 192, 104));
+  }
+  .januaryFooter a:nth-child(3) .card {
+    background: linear-gradient(205deg, rgb(242, 173, 43), rgb(242, 84, 39), rgb(215, 51, 158), rgb(2, 65, 214));
+  }
+  
+  .januaryFooter .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .januaryFooter .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+
+@media (max-width: 650px) {
+    .januaryFooter .card {
+        height: 50px;
+    }
+}

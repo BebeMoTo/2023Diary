@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>My 2023 in a Nutshell (Pero malaki yung nutshell lmao)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,300&family=Roboto+Slab:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/069dd297de.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style> 
+        :root {
+            --brown1:  #cc8565;
+            --brown2:  #e2a285;
+            --titleFont: 'Roboto Condensed', sans-serif;
+            --contentFont: 'Roboto Slab', serif;
+        }   
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+        /*AKo na*/
+        .swiper-slide .containerNgPrend {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 2% 2%;
+          background-image: linear-gradient(rgba(255, 255, 255, .1),rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.8));
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          min-height: 100%;
+          overflow: hidden;
+        }
+        .swiper-slide .containerNgPrend h2 {
+          text-align: left;
+          font-variant: small-caps;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        .swiper {
+          width: 100%;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+    
+        .swiper-slide {
+          background-size: cover;
+          background-position: center;
+        }
+    
+        .mySwiper2 {
+          height: 80%;
+          width: 100%;
+          margin-bottom: 1%;
+          border-radius: 10px;
+        }
+    
+        .mySwiper {
+          height: 20%;
+          box-sizing: border-box;
+          padding: 10px 0;
+        }
+    
+        .mySwiper .swiper-slide {
+          width: 25%;
+          height: 100%;
+          opacity: 0.4;
+        }
+    
+        .mySwiper .swiper-slide-thumb-active {
+          opacity: 1;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .containerNgPrend div {
+          text-align: left;
+          position: absolute;
+          left: 2%;
+          bottom: 2%;
+          color: #efe0b9;
+        }
+        .containerNgPrend div ul {
+          list-style-type: none;
+        }
+        .containerNgPrend p {
+          font-size: 25px;
+          font-variant: small-caps;
+          color: #d1c5a8;
+          font-weight: 600;
+        }
+
+        @media (min-width: 1000px) {
+          .containerNgPrend {
+            isolation: isolate;
+          }
+          .containerNgPrend h2 {
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            translate: -50%;
+            color: #efe0b9;
+            transition-duration: 500ms;
+            scale: 0;
+            z-index: 2;
+          }
+          .containerNgPrend h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            transform: scaleX(0);
+            border-top: 2px solid #efe0b9;
+            border-bottom: 2px solid #efe0b9;
+            z-index: 3;
+          }
+          .containerNgPrend h2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% calc(-50% + 2px);
+            width: 100%;
+            min-height: 80%;
+            transform: scaleX(0);
+            background: rgba(0,0,0,.4);
+            z-index: -1;
+          }
+          .containerNgPrend:hover h2 {
+            top: 5%;
+            scale: 1.5;
+          }
+          .containerNgPrend:hover h2::before {
+            transform: scaleX(1.1);
+            transition-delay: 500ms;
+            transition-duration: 500ms;
+          }
+          .containerNgPrend:hover h2::after {
+            transform: scaleX(1.2);
+            transition-delay: 700ms;
+            transition-duration: 500ms;
+          }
+        }
+        @media (max-width: 999px) {
+          .containerNgPrend {
+            isolation: isolate;
+          }
+          .containerNgPrend h2 {
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            color: #efe0b9;
+            z-index: 5;
+          }
+          .containerNgPrend h2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            border-top: 2px solid #efe0b9;
+            border-bottom: 2px solid #efe0b9;
+            transform: scaleX(90%);
+          }
+          .containerNgPrend h2::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% calc(-50% + 2px);
+            width: 100%;
+            min-height: 80%;
+            transform: scaleX(1.05);
+            background: rgba(0,0,0,.5);
+            z-index: -1;
+          }
+        }
+        @keyframes zoomPic {
+          0% {
+            scale: 1;
+          }
+          50% {
+            scale: 1.015;
+          }
+          100% {
+            scale: 1;
+          }
+        }
+        .swiper-wrapper .swiper-slide:hover img{
+          animation: zoomPic 5s ease  infinite alternate ;
+        }
+        .fa-facebook {
+          color:rgb(1, 2, 66);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          font-size: 100px;
+          transition-duration: 500ms;
+        }
+        .fa-envelope {
+          color:rgb(79, 139, 222);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          font-size: 100px;
+          transition-duration: 500ms;
+        }
+        .fa-instagram {
+          color:  rgb(242, 155, 58);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          font-size: 100px;
+          transition-duration: 500ms;
+        }
+      </style>
+</head>
+<body>
+    <header class="index-header">
+        <nav>
+            <img src="imagesJan/me.jpg" alt="Pogi Ko" class="btn-animation-main" onclick="openMenu()" loading="lazy">
+            <ul class="index-menu">
+                <li><a href="#about-me" onclick="openMenu()">About Me</a></li>
+                <li><a href="#indexParaSaan" onclick="openMenu()">Para saan to?</a></li>
+                <li><a href="#indexFooter" onclick="openMenu()">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="textbox">
+            <h1>Compilation Of My 2023</h1>
+            <p>"Oh God baket ganto yung taon na to?"</p>
+            <a href="#indexMonths"><button>Lezzgo</button></a>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#efe0b9" fill-opacity="1" d="M0,0L12,37.3C24,75,48,149,72,170.7C96,192,120,160,144,154.7C168,149,192,171,216,197.3C240,224,264,256,288,245.3C312,235,336,181,360,149.3C384,117,408,107,432,122.7C456,139,480,181,504,202.7C528,224,552,224,576,208C600,192,624,160,648,133.3C672,107,696,85,720,112C744,139,768,213,792,229.3C816,245,840,203,864,170.7C888,139,912,117,936,122.7C960,128,984,160,1008,160C1032,160,1056,128,1080,101.3C1104,75,1128,53,1152,85.3C1176,117,1200,203,1224,224C1248,245,1272,203,1296,202.7C1320,203,1344,245,1368,256C1392,267,1416,245,1428,234.7L1440,224L1440,320L1428,320C1416,320,1392,320,1368,320C1344,320,1320,320,1296,320C1272,320,1248,320,1224,320C1200,320,1176,320,1152,320C1128,320,1104,320,1080,320C1056,320,1032,320,1008,320C984,320,960,320,936,320C912,320,888,320,864,320C840,320,816,320,792,320C768,320,744,320,720,320C696,320,672,320,648,320C624,320,600,320,576,320C552,320,528,320,504,320C480,320,456,320,432,320C408,320,384,320,360,320C336,320,312,320,288,320C264,320,240,320,216,320C192,320,168,320,144,320C120,320,96,320,72,320C48,320,24,320,12,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <main class="index-main" id="index-main">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#efe0b9" fill-opacity="1" d="M0,288L12.6,266.7C25.3,245,51,203,76,181.3C101.1,160,126,160,152,181.3C176.8,203,202,245,227,261.3C252.6,277,278,267,303,266.7C328.4,267,354,277,379,277.3C404.2,277,429,267,455,240C480,213,505,171,531,154.7C555.8,139,581,149,606,144C631.6,139,657,117,682,128C707.4,139,733,181,758,186.7C783.2,192,808,160,834,144C858.9,128,884,128,909,122.7C934.7,117,960,107,985,133.3C1010.5,160,1036,224,1061,250.7C1086.3,277,1112,267,1137,229.3C1162.1,192,1187,128,1213,117.3C1237.9,107,1263,149,1288,192C1313.7,235,1339,277,1364,245.3C1389.5,213,1415,107,1427,53.3L1440,0L1440,0L1427.4,0C1414.7,0,1389,0,1364,0C1338.9,0,1314,0,1288,0C1263.2,0,1238,0,1213,0C1187.4,0,1162,0,1137,0C1111.6,0,1086,0,1061,0C1035.8,0,1011,0,985,0C960,0,935,0,909,0C884.2,0,859,0,834,0C808.4,0,783,0,758,0C732.6,0,707,0,682,0C656.8,0,632,0,606,0C581.1,0,556,0,531,0C505.3,0,480,0,455,0C429.5,0,404,0,379,0C353.7,0,328,0,303,0C277.9,0,253,0,227,0C202.1,0,177,0,152,0C126.3,0,101,0,76,0C50.5,0,25,0,13,0L0,0Z"></path>
+        </svg>
+        <div class="index-main-about" id="about-me">
+            <div class="index-main-about-image"></div>
+            <div class="index-main-about-image-desc">
+                <h2>About Me!!!</h2>
+                <p><span>Name:</span> Jay-R C. Buitre</p>
+                <p><span>Birthdate:</span> August 27, 2002</p>
+                <p><span>Height:</span> 5' 6"</p>
+                <p><span>Weigth:</span> 53kg</p>
+                <p><span>Talent:</span> Makipagbardagulan</p>
+            </div>
+        </div>
+        <div class="index-main-about-text">
+            <p>Hi. Syiempre magtatagalog ako. Website ko to eh tas bobo pa ko sa English. Anyways, kung di kita kaibigan tas nakita mo to, Ano ka gold? sa mga kaclose ko lang ipapakita to no. Pero what if ikalat nila yung link HAHAHA keme pa naman sila. Btw, kung marami kang mapapansing typo,  wag mo nlng pansinin. Di ko na chinechek habang tinatype ko e.</p>
+            <br>
+            <p>So bat ako nag-IT? Kwento ko na website ko naman to eh HAHAHA. Alam kong paulit ulit mo na nakita yung meme na "gamer ako eh, kaya mag aIT ako". Tbh totoo naman kase na nasasama lagi sa rason yon kahit di ko naman bet maging game developer. Isa pa, mayroon akong tindahan na lagi binibilhan ng yelo nung around grade 6 palang ako. May anak daw silang IT na nagtatrabaho sa GMA-7. Forda wow. So ayon bago sila lumipat ulet ng bahay, yung mga librong nagamit non nung nag-aaral pa siya, binigay nila saken. Eyyyyyyy. Tho di ko naman nagamit lahat yon since outdated na contents HAHAHAHA.</p>
+            <br>
+            <p>About naman sa hobbies ko. Mahilig ako manood ng kung ano-ano. Literal. Movies, Anime, Series, Corn? HAHAHA. Nagcocompose den ako ng sarili kong mga piece before masira yung keyboard ko. Siyempre mahilig ako sa nota eh. AY HAHAHAHAHA. Other than that, wala na. Makinig nlng ng musics? Lahat naman siguro gawain yan no?</p>
+            <br>
+            <p>Sabi ko nga mga kaclose ko lang papakitaan ko neto. Pero in case na ineme nila ako (which is ok lang basta reto yan. Ay HAHAHA), eto ung mga good and bad habits ko. Simulan muna naten sa good habits. Siyempre ganyan tayo eh sa simula lang makikita yung green flags tas magugulat ka na lang isa isa lalabas yung red flags HAHAHA. So una i guess is pag-inom? HAHAHA good yon baket ba kumakapal muka ko don eh. Permanent na nga eh basta may kasama ako. Di ko kaya gumalaw pag para sa sarili ko. Oks lang kung para sayo. Ay. I mean para sa iba. Second i think is yung wala akong pake sa iba? Sabi ng isa kong kaclose (actually dalawa sila. Eh ginanon ba naman ako nung isa HAHAHA), na good thing daw na hindi mo masyadong iniisip yung kung ano iniisip ng iba sayo. I mean dati pa akong ganon pakealam ko ba sayo kung di kita kilala. Pag walang naambag yung tao sa paggrow ko, kasama lang siya sa blurred characters ng kwento ng buhay ko.</p>
+            <br>
+            <p>Bad habits na. Sige sama na naten pag-inom. Per mababawasan na yan nareblock ba naman HAHAHA. The moment na sinusulat ko to is the day na inannounce na irereblock kame. Sheeesh kasakit legit. Sila nagturo saken uminom tas nagkahiwa-hiwalay kame. Lahat na lang ba ng may maituturo saken ihihiwalay saken? Forda sad boi HAHAHA. Pangalawang bad habit ko ay maging tamad. Sorna sa mga bagay na interisado lang ako nagsisipag eh. Interisado naman ako sa kanya pero bat ginanon. Ay. HAHAHA</p>
+            <div class="index-main-about-text-seemore"></div>
+            <div class="index-main-about-text-seemore-dots" onclick="readMore()">See More...</div>
+            <div class="index-main-about-text-seemore-dots-close" onclick="readMore()">See Less...</div>
+        </div>
+        <div class="index-divider index-divider1"></div>
+        <div class="index-divider index-divider2"></div>
+        <div class="index-divider index-divider3"></div>
+        <div class="likesAndDislikes">
+            <h2>My Most and Least Favorites</h2>
+            <div class="likesAndDislikesContainer">
+                <table>
+                    <tr style="visibility: hidden;">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Most Favorites</th>
+                        <th colspan="3">Least Favorites</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(1)">Classical</td>
+                        <th colspan="2" onclick="indexModal(1)">Music Genre</th>
+                        <td colspan="2" onclick="indexModal(1)">Heavy Rock</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(2)">Cuddle Me Harder</td>
+                        <th colspan="2" onclick="indexModal(2)">Song</th>
+                        <td colspan="2" onclick="indexModal(2)">Sige</td>
+                    </tr>                    
+                    <tr>
+                        <td colspan="2" onclick="indexModal(3)">Ice Cream</td>
+                        <th colspan="2" onclick="indexModal(3)">Food</th>
+                        <td colspan="2" onclick="indexModal(3)">Kimchi</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(4)">Brown</td>
+                        <th colspan="2" onclick="indexModal(4)">Color</th>
+                        <td colspan="2" onclick="indexModal(4)">Yellow</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(5)">Ed Sheeran</td>
+                        <th colspan="2" onclick="indexModal(5)">Musician</th>
+                        <td colspan="2" onclick="indexModal(5)">Sliz</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(6)">Divide</td>
+                        <th colspan="2" onclick="indexModal(6)">Album</th>
+                        <td colspan="2" onclick="indexModal(6)">Equals</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(7)">Spring</td>
+                        <th colspan="2" onclick="indexModal(7)">Season</th>
+                        <td colspan="2" onclick="indexModal(7)">Summer</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(8)">Valentine's</td>
+                        <th colspan="2" onclick="indexModal(8)">Occasion</th>
+                        <td colspan="2" onclick="indexModal(8)">New Year</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(9)">The Giver</td>
+                        <th colspan="2" onclick="indexModal(9)">Movie</th>
+                        <td colspan="2" onclick="indexModal(9)">M3GAn</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="indexModal(10)">Attack on Titan</td>
+                        <th colspan="2" onclick="indexModal(10)">Series/Anime</th>
+                        <td colspan="2" onclick="indexModal(10)">Kakegurui</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <aside class="index-aside">
+        <h2 class="indexAsideTitle">Title</h2>
+        <div class="indexAsideContent">
+            <div class="indexAsideContentMost">
+                <div class="indexContentPic indexContentPic1"></div>
+                <p class="indexContentPara1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam tenetur accusantium optio nisi cupiditate cumque dicta accusamus debitis! Fugit molestias cupiditate quidem quas pariatur alias.</p>
+            </div>
+            <div class="indexAsideContentLeast">
+                <div class="indexContentPic indexContentPic2"></div>
+                <p class="indexContentPara2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatibus deserunt itaque dolor, doloremque ipsam officia ducimus! Delectus quaerat incidunt, provident cumque cum neque beatae.</p>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark indexModalClose" onclick="indexModal(0)"></i>
+    </aside>
+
+    <section class="indexParaSaan" id="indexParaSaan">
+        <h2 class="indexParaSaanTitle">Para Saan Ito?</h2>
+        <p class="paraSaanItoPara">Ginagawa ko tong website na to obviously, para isave yung mga memories na na nakakasalubong at makakasalubong pa sa buhay. Sa totoo lang sobrang daming nagaganap ngayon sa buhay ko HAHAHA. Gusto gamitin as a tool para ganto, ma-enhance yung skill ko sa web designing. Balak ko ituloy tuloy to hanggang sa kaya ng buhay ko. Parang diary ba ganon XD. Siyempre, dinededicate ko to sa mga kaibigan na nakilala ko. Kung interisado ka makilala sila, lamunin mo to HAHAHA</p>
+
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="indexPic/juniorHighPrends.jpg" />
+                  <div class="containerNgPrend">
+                    <h2>Junior High</h2>
+                    <div>
+                      <p>Names:</p>
+                      <ul>
+                        <li>- Lyka Capati (Gal in blue)</li>
+                        <li>- Camille Aguila (Gal in maroon)</li>
+                        <li>- Me (Guy in pink)</li>
+                        <li>- Mark Equiz (Guy in brown)</li>
+                        <li>- Albert Isip (Guy in black)</li>
+                        <li>- Ezrah Ambita (Gal w/ shades)</li>
+                        <li>- Rizalyn Galica (Front left)</li>
+                        <li>- Kathlenne Reyes (Front middle)</li>
+                        <li>- Kian Chavez (Front right)</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/camilleAguila.jpg" />
+                  <div class="containerNgPrend">
+                    <h2>Camille Alexis Aguila</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Grade 8 ko naging prend</li>
+                        <li>- Kuripot HAHAHA</li>
+                        <li>- Maingay</li>
+                        <li>- Nanayin. Laging nantatalak</li>
+                        <li>- Laging nandiyan sheeesh</li>
+                        <li>- Cute *daw* HAHAHA</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/seniorHighPrends.jpeg" />
+                  <div class="containerNgPrend">
+                    <h2>Senior High</h2>
+                    <div>
+                      <p>Names:</p>
+                      <ul>
+                        <li>- Alessandra Coronel (Gal in Left)</li>
+                        <li>- Alexi Dumalag (Gal in black)</li>
+                        <li>- Lawrence Go (One with glasses)</li>
+                        <li>- Nichole Vivas (Gal in blue)</li>
+                        <li>- Me (Guy in pink)</li>
+                        <li>- Aliyah Manalondong (Gal in white)</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/alessandraCoronel2.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Alessandra Marie Coronel</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- BIOOOT &#60;3</li>
+                        <li>- Kalmado palagi</li>
+                        <li>- Magaling magdrawing</li>
+                        <li>- Supportive nanay</li>
+                        <li>- Da best magturo ng rubics lmao</li>
+                        <li>- Maganda na maganda den nais XD</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/lorensGo.gif"/>
+                  <div class="containerNgPrend">
+                    <h2>John Lawrence Go</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- BIOOOT &#60;3??? HAHAHA</li>
+                        <li>- Makulit matic</li>
+                        <li>- Maingay HAHAHA</li>
+                        <li>- Warla sa kaaway ng kaibigan &#60;3</li>
+                        <li>- Cute daw (magsama kayo ni camille HAHAHA)</li>
+                        <li>- Solid. Taga-tondo ba naman</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/alexiDumalag.gif"/>
+                  <div class="containerNgPrend">
+                    <h2>Alexi Maxine Dumalag</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Nananampal yung pilikmata</li>
+                        <li>- Maganda siyempre. Dami ba namang lalaki</li>
+                        <li>- Anak ni Taylor</li>
+                        <li>- Soju yung tubig</li>
+                        <li>- Aakalain mo talagang mataray</li>
+                        <li>- Nadaplisan ng aking daliri HAHAHA</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/collegePrends.jpg" />
+                  <div class="containerNgPrend">
+                    <h2>College Mates</h2>
+                    <div>
+                      <p>Names:</p>
+                      <ul>
+                        <li>- Jamaica Gravansos (Top left)</li>
+                        <li>- Me (Top middle)</li>
+                        <li>- Niña Mae Uy (Top Right)</li>
+                        <li>- Andrey Nichole Cabuenas (Front left)</li>
+                        <li>- Carl Lawrence Sia (Front middle)</li>
+                        <li>- Samantha Magpoc (Front right)</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/jamaica.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Jamaica Gravansos</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Wild siyempre HAHAHA</li>
+                        <li>- Madasalin &#10013;</li>
+                        <li>- Kahit wild sweet XXD</li>
+                        <li>- Kaduo ko sa Python Elective X></li>
+                        <li>- Kahawig ng GBF ko HAHAHA</li>
+                        <li>- Taken na (As of Feb.5, 2023)</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/ninaUy2.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Niña Mae Uy</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Magaling magdrawing sheesh</li>
+                        <li>- Hobby bumuo ng kung ano ano gamit yarn &#128204;</li>
+                        <li>- Can keep secrets &#128151;</li>
+                        <li>- Nagpapapunta sa bahay Solid</li>
+                        <li>- Nagcocosplay forda inlab matic mga weebs jan</li>
+                        <li>- Single po.</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/andreyCabuenas.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Andrey Nichole Cabuenas</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Loyal kay ano HAHAHA</li>
+                        <li>- Mahilig mag TikTok &#127926;</li>
+                        <li>- Sweet na ferson</li>
+                        <li>- Family-oriented &#128525;</li>
+                        <li>- Working student pa</li>
+                        <li>- Singleee den. Pero loyal kay ano eh.</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/carlSia.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Carl Lawrence Sia</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- First Kiss at First mejo HJ? HAHAHA</li>
+                        <li>- Malibog &#128557;</li>
+                        <li>- Dancerist</li>
+                        <li>- Hilig magpainom ng alak nila sa bahay</li>
+                        <li>- Nagwowork den</li>
+                        <li>- Single pero baka next week di na HAHAHA</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/samMagpoc.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Samantha Magpoc</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Wala nang intro intro, eto nagturo saken uminom</li>
+                        <li>- Pinipilahan ng mga lalaki</li>
+                        <li>- Nagbabagong buhay na</li>
+                        <li>- Jowa ko sa kwento ni mama</li>
+                        <li>- Maalagang tao</li>
+                        <li>- Single. Di pa makapili sa dami no?</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/yanyanFlores.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Mark Ryan Flores</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- TITIIIKMAAAN!!!</li>
+                        <li>- Solid pag inuman. Siya na halos gumastos lahat</li>
+                        <li>- Best Boyprend ni Sam</li>
+                        <li>- Di namimigay ng mic HAHAHA</li>
+                        <li>- Ginanon</li>
+                        <li>- Mah Big Boi HAHAHA</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>       
+
+              <div class="swiper-slide">
+                <img src="indexPic/nathEsguerra.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Nathaniel Esguerra</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Laging nagaganon. Idol ata ako HAHAHA</li>
+                        <li>- Solid bumulong pag inuman</li>
+                        <li>- Nagmamanicure bigla HAHAHA</li>
+                        <li>- Matibay sa labanan idol ko to</li>
+                        <li>- Number 1 pamato ko</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/jeloFlores.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Jelo Flores</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Masipag</li>
+                        <li>- Solid magmahal witness ako</li>
+                        <li>- Adik kay Wednesday HAHAHA</li>
+                        <li>- See the light where the sky meets the sea</li>
+                        <li>- Tinropa&#128532;</li>
+                        <li>- Daddy ko</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/vicOcasla.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Vic Ocasla</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Daming Chocolate</li>
+                        <li>- Nanlilibre ng Smirnoff</li>
+                        <li>- Mahinang nilalang di umiinom</li>
+                        <li>- Laging napapagkamalang bakla HAHAHA</li>
+                        <li>- Solid mainlab ano-ano ginagawa</li>
+                        <li>- Magaling maggitara &#127928;</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/jackMengua.jpeg"/>
+                  <div class="containerNgPrend">
+                    <h2>Jack Danielle Mengua</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Solid magpakain sa kanila. Neber porgetti</li>
+                        <li>- Laging nasa sulok amp HAHAHA</li>
+                        <li>- Kasama den sa laban ng pagmamahal XD</li>
+                        <li>- Magaganda kaibigan HAHAHA</li>
+                        <li>- Nagpapalagay ng kanta pero ayaw hawakan yung mic</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/paulRomero.jpeg"/>
+                  <div class="containerNgPrend">
+                    <h2>Paul Patrick Romero</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Pogi shet</li>
+                        <li>- Sa kape nalalasing HAHAHA</li>
+                        <li>- Yung galit niya kay BBM pang 100 tao HAHAHA dapat lang</li>
+                        <li>- Kasabay ko umuwi</li>
+                        <li>- Mahilig sa BJ</li>
+                        <li>- Alipin ng reyna niya HAHAHAHAHA</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div> 
+
+              <div class="swiper-slide">
+                <img src="indexPic/miggyCastro.png"/>
+                  <div class="containerNgPrend">
+                    <h2>Miggy Castro</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Ginanon</li>
+                        <li>- Mahal yung lababo nila jack HAHAHA</li>
+                        <li>- Solid kasama kahit tahimik XXD</li>
+                        <li>- Di mo daw sineseen si ano</li>
+                        <li>- Tibay. Nabubuhay na mag-isa</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/chesterAron.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Chester Aron</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Sobrang tahimik</li>
+                        <li>- Grabe naman lumingon sa babae HAHAHA</li>
+                        <li>- Galit Sa Ganitong Typings</li>
+                        <li>- Solid na listener</li>
+                        <li>- Ginanon ni Jhong Hilarious kairita.</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="indexPic/rayGarcia.jpg"/>
+                  <div class="containerNgPrend">
+                    <h2>Ray Philip Garcia</h2>
+                    <div>
+                      <p>Description:</p>
+                      <ul>
+                        <li>- Ganyan dapat leader. Nag-aaya ng inuman HAHAHA</li>
+                        <li>- Papi ng orihinal na IT-11(21-22)</li>
+                        <li>- Lalo Namang Galet Sa Ganitong Typings Hahaha</li>
+                        <li>- Mapagmahal. Kakampi ko. Jayr ako eh HAHAHA</li>
+                        <li>- Sulit yung kulet</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+              
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="indexPic/juniorHighPrends.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/camilleAguila.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/seniorHighPrends.jpeg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/alessandraCoronel2.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/lorensGo.gif" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/alexiDumalag.gif" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/collegePrends.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/jamaica.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/ninaUy2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/andreyCabuenas.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/carlSia.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/samMagpoc.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/yanyanFlores.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/nathEsguerra.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/jeloFlores.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/vicOcasla.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/jackMengua.jpeg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/paulRomero.jpeg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/miggyCastro.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/chesterAron.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="indexPic/rayGarcia.jpg" />
+              </div>
+
+            </div>
+          </div>
+
+    </section>
+
+    <section class="indexMonths" id="indexMonths">
+      <h2>Select A Month</h2>
+      <div class="indexMonthContainer">
+        <button onclick="openMonthLink(1)">January</button>
+        <button onclick="openMonthLink(2)">February</button>
+        <button onclick="openMonthLink(3)">March</button>
+        <button onclick="openMonthLink(4)">April</button>
+        <button onclick="openMonthLink(5)">May</button>
+        <button onclick="openMonthLink(6)">June</button>
+        <button onclick="openMonthLink(7)">July</button>
+        <button onclick="openMonthLink(8)">August</button>
+        <button onclick="openMonthLink(9)">September</button>
+        <button onclick="openMonthLink(10)">October</button>
+        <button onclick="openMonthLink(11)">November</button>
+        <button onclick="openMonthLink(12)">December</button>
+      </div>
+    </section>
+
+    <footer class="indexFooter" id="indexFooter">
+      <h2>Contacts:</h2>
+      <br><br><br>
+      <!-- <p><span>Email:</span> <a href="mailto:jayrbuitr0226@gmail.com">jayrbuitre0226@gmail.com</a></p>
+      <p><span>Facebook:</span> <a href="https://www.facebook.com/jayrculdora.buitre?mibextid=ZbWKwL" target="_blank">Jay-R Culdora Buitre</a></p>
+      <p><span>Instagram:</span> <a href="https://www.instagram.com/bebeniyato/" target="_blank">@bebeniyato</a></p> -->
+      <div class="indexFooterSocial">
+        <div class="indexFooterSocialCard">
+          <a href="https://www.facebook.com/jayrculdora.buitre" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="indexFooterSocialCard">
+          <a href="mailto:jayrbuitr0226@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="indexFooterSocialCard">
+          <a href="https://www.instagram.com/bebeniyato/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      
+    </footer>
+
+
+    <script src="script.js">
+    </script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+</body>
+</html>
