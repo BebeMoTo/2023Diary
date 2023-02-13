@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>February || </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,300&family=Roboto+Slab:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="https://kit.fontawesome.com/069dd297de.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --purple1: rgb(57, 39, 112);
+            --purple2: rgb(159, 43, 144);
+            --purple3: rgb(243, 80, 129);
+            --orange1: rgb(255, 112, 118);
+            --orange2: rgb(255, 164, 141);
+            --pink1: rgb(255, 205, 199);
+            --white: rgb(240, 235, 242);
+        }
+        html {
+            scroll-padding-top: 0px;
+        }
+        body {
+            background: url(imagesFeb/febGIF.gif);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .fa-bars {
+            margin: 5%;
+            font-size: 45px;
+            color: var(--orange1);
+            cursor: pointer;
+            transition-duration: 500ms;
+        }
+        .fa-bars-staggered {
+            font-size: 25px;
+            color: var(--orange1);
+            transition-duration: 500ms;
+        }
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .februaryDayContainer:not(:nth-child(3)) .swiper-slide {
+          height: 600px;
+        }
+        .swiper-slide img {
+            display: block;
+            height: 100%;
+        }
+
+        .febfeb {
+            margin-bottom: 8%;
+            margin-top: 8%;
+        }
+        @media (max-width: 1000px) {
+            .febfeb {
+            margin-bottom: 15%;
+            margin-top: 15%;
+            }
+        }
+        @media (max-width: 400px) {
+            .febfeb {
+            margin-bottom: 20%;
+            margin-top: 20%;
+            }
+        }
+
+        .februaryDivider {
+            margin-bottom: 15%;
+        }
+        @media (max-width: 1000px) {
+            .februaryDivider {
+            margin-bottom: 25%;
+            }
+        }
+        @media (max-width: 450px) {
+            .februaryDivider {
+            margin-bottom: 35%;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: var(--purple3);
+        }
+
+        .wave-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264AE;
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 90%;
+}
+
+.wave-group .bar:before,.wave-group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: rgb(57, 39, 112);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="februaryHeader">
+        <div class="februaryHeaderTextbox">
+            <h1>February 2023</h1>
+            <p>Hindi na magpapaganon</p>
+        </div>
+        <i class="fa-sharp fa-solid fa-bars fa-bars-february" onclick="openMenuFebruary()" id=""></i>
+    </header>
+
+    <nav class="februaryNav">
+        <ul>
+            <li><i class="fa-sharp fa-solid fa-bars-staggered fa-staggered-february" onclick="openMenuFebruary()"></i></li>
+            <li><a href="#feb2">2</a></li>
+            <li><a href="#feb13">13</a></li>
+            <li><a href="#happyValentinesContainer">14</a></li>
+            <!-- <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li> -->
+        </ul>
+
+    </nav>
+
+    <section class="februaryDayContainer">
+        <div class="febfeb">
+            <h2 id="feb2">February 2: Enrollment Day</h2>
+            <p>Before netong enrollment, nag-leak na yung mga pangalan na mapupunta sa kada-block. Eh may plot twist, nireblock ulet HAHAHA. Ayon hiwahiwalay parin kame ng circle ko tas nakakatawa pa, galing sa original na IT-21, lima lang kame napunta sa IT-24 tapos balak pa ata lumipat ni dade Kevs. Panghapon kaya ako? Most likely yan XD. Good luck na lang sameng lahat. Ay oo nga pala, additional good news, di na ako magiging lasinggero. Hiniwalay saken ni UDM si Yanyan tsaka Sam eh HAHAHA ems. Mamimiss ko talaga yung mga inuman namen.</p>
+            <div class="containerNgSwiper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment1.jpg" loading="lazy"/>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment2.jpg" loading="lazy"/>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment3.jpg" loading="lazy"/>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment4.jpg" loading="lazy"/>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment5.jpg" loading="lazy" />
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment6.jpg" loading="lazy" />
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                        <img src="imagesFeb/2-Enrollment7.jpg" loading="lazy" />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+<div class="februaryDivider">
+    <div class="lines"></div>
+</div>
+
+
+<section class="februaryDayContainer">
+    <div class="febfeb">
+        <h2 id="feb13">February 13: First Day Kuno</h2>
+        <p>First day pero walang schedule HAHAHA. Ending sa labas lang den ako di na pumasok sa school. Una pumunta ako SM tas kinita sila don. Taray ni Niña kumikita sa ganon sa pabulaklak bulaklak niyang yarn. Anyways, nakita nila Sia si Puzon like bruh buti sa underground ako dumaan. After nila kumain nag ikot-ikot kame tas diretso sa Arroceros tas umuwi na sila Yanyan, Chester, Niña, tsaka Vic kalaunan. Naiwan kame nila Sia at Jam na bumalik sa SM para bilhan ng regalo jowa niya (di wow) tas nag McDO. Nakakalungkot lang na wala si Victor HAHAHA ems</p>
+        <div class="containerNgSwiper">
+            <div class="swiper feb13">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    <img src="imagesFeb/13-SM1.jpg" loading="lazy"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    <img src="imagesFeb/13-SM2.jpg" loading="lazy"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    <img src="imagesFeb/13-SM3.jpg" loading="lazy"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+                    <img src="imagesFeb/13-SM4.jpg" loading="lazy"/>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+    </div>
+</section>
+
+<div class="februaryDivider">
+  <div class="lines"></div>
+</div>
+
+<section class="happyValentinesContainer" id="happyValentinesContainer">
+  <!--Background-->
+  <div class="happyValentines">
+    <div class="happyValentinesBackground">
+    </div>
+  </div>
+
+  <!--Transition-->
+  <div class="valentinesLeft"><h4>Hi</h4></div>
+  <div class="valentinesRight"><h4 id="valentinesRightName">Pangalan</h4></div>
+
+  <!--Password:-->
+  <div class="enterPasswordFebruary">
+    <h3 id="valentinesInputTitle" style="transition-duration: 500ms;">Enter Your Letter Code</h3>
+    <div class="wave-group" id="valentinesInputContainer" style="transition-duration: 300ms;">
+      <input required="" type="text" class="input" id="valentinesInput">
+      <span class="bar"></span>
+      <label class="label">
+        <span class="label-char" style="--index: 0">C</span>
+        <span class="label-char" style="--index: 1">O</span>
+        <span class="label-char" style="--index: 2">D</span>
+        <span class="label-char" style="--index: 3">E</span>
+        <span class="label-char" style="--index: 4">:</span>
+      </label>
+    </div>
+    <button onclick="showLetter()" id="valentinesInputButton"> Submit
+    </button>
+  </div>
+
+  <!--Content-->
+  <div class="contentContainerFebruary">
+    <h3 id="contentHeaderFebruary">February 14:</h3>
+    <p id="contentParaFebruary"></p>
+    <audio src="" controls="true" id="valentineSong"></audio>
+  </div>
+
+</section>
+
+<div class="februaryDivider">
+  <div class="lines"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+  <script>
+    var swiper1 = new Swiper(".feb13", {
+      effect: "flip",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>
