@@ -11,7 +11,8 @@ html {
 
 .index-header {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    height: 100svh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(67,67,67,.4)), url(imagesJan/me.jpg);
     background-position: center;
     background-size: cover;
@@ -725,6 +726,7 @@ html {
 .januaryHeader {
     width: 100%;
     min-height: 100vh;
+    min-height: 100svh;
     background: linear-gradient(-250deg, rgb(0, 0, 0,.5), rgb(0, 34, 51,.5), rgb(18, 137, 163,.5)), url(imagesJan/januaryBG.gif);
     background-position: top left;
     background-size: cover;
@@ -1063,6 +1065,7 @@ box-shadow:  35px 35px 70px #011117,
 .februaryHeader {
     width: 100%;
     min-height: 100vh;
+    min-height: 100svh;
     background: linear-gradient(-250deg, rgb(57, 39, 112,.5), rgb(255, 112, 118,.3), rgb(255, 205, 199,.3)), url("imagesFeb/februaryBG.gif");
     background-position: center;
     background-size: cover;
