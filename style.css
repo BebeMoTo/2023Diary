@@ -1152,6 +1152,7 @@ box-shadow:  35px 35px 70px #011117,
 .februaryNav ul {
     width: 75px;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
