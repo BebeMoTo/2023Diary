@@ -1429,3 +1429,33 @@ box-shadow:  35px 35px 70px #011117,
     left: 50%;
     translate: -50% 0;
 }
+
+.februaryFooter {
+    width: 100%;
+    background-color: pink;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+.cardText {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+}
+.cardText span {
+    font-size: 20px;
+    text-decoration: none;
+    color: #336ce6;
+}
+.cardText i {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #336ce6;
+}

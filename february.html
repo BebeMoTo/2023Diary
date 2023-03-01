@@ -202,6 +202,67 @@
   width: 50%;
 }
 
+.card {
+  width: 190px;
+  height: 50px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(#36cde0, #336ce6);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+.insta .circle{
+  background: radial-gradient(#da36e0, #8e18ac);
+  animation-delay: 700ms;
+}
+
+.gmail .circle{
+  background: radial-gradient(#e03636, #970e0e);
+  animation-delay: 1500ms;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
 
     </style>
 </head>
@@ -220,8 +281,8 @@
             <li><a href="#feb2">2</a></li>
             <li><a href="#feb13">13</a></li>
             <li><a href="#happyValentinesContainer">14</a></li>
+            <li><a href="#feb22">22</a></li>
             <!-- <li><a href="#">-</a></li>
-            <li><a href="#">-</a></li>
             <li><a href="#">-</a></li> -->
         </ul>
 
@@ -405,9 +466,6 @@
   <div class="lines"></div>
 </div>
 
-<<<<<<< HEAD
-
-=======
 <section class="februaryDayContainer">
   <div class="febfeb">
       <h2 id="feb22">February 22: Hapi Bortdey Sia</h2>
@@ -437,19 +495,15 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  <img src="imagesFeb/22-inom5.jpg" loading="lazy"/>
+                  <img src="imagesFeb/22-inom6.jpg" loading="lazy"/>
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  <img src="imagesFeb/22-inom6.jpeg" loading="lazy"/>
+                  <img src="imagesFeb/22-inom3.jpg" loading="lazy"/>
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  <img src="imagesFeb/22-inom3.jpeg" loading="lazy"/>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  <img src="imagesFeb/22-inom9.jpeg" loading="lazy"/>
+                  <img src="imagesFeb/22-inom9.jpg" loading="lazy"/>
                 </div>
                 <div class="swiper-slide">
                   <video src="imagesFeb/22-inom10.mp4" controls="true" height="100%"></video>
@@ -457,18 +511,7 @@
                 <div class="swiper-slide">
                   <video src="imagesFeb/22-inom11.mp4" controls="true" height="100%"></video>
                 </div>
-                <div class="swiper-slide">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  <img src="imagesFeb/22-inom7.jpeg" loading="lazy"/>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
-                  <img src="imagesFeb/22-inom8.jpeg" loading="lazy"/>
-                </div>
 
-                <div class="swiper-slide">
-                  <video src="imagesFeb/22-inom12.mp4" controls="true" height="100%"></video>
-                </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -479,7 +522,41 @@
 <div class="februaryDivider">
   <div class="lines"></div>
 </div>
->>>>>>> parent of e1c8862 (Update february.html)
+
+<a href="https://www.facebook.com/jayrculdora.buitre?mibextid=ZbWKwL" target="_blank">
+<footer class="februaryFooter">
+  <div class="card">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="card-inner"></div>
+    <div class="cardText">
+    <span>Facebook</span><i class="fa-brands fa-square-facebook"></i>
+    </div>
+  </div>
+</a>
+
+<a href="https://www.instagram.com/bebeniyato/">
+  <div class="card insta">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="card-inner"></div>
+    <div class="cardText">
+    <span style="color: #be21b7;">Instagram</span><i class="fa-brands fa-square-instagram"  style="color: #be21b7;"></i>
+    </div>
+  </div>
+</a>
+
+<a href="mailto:jayrbuitr0226@gmail.com">
+  <div class="card gmail">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="card-inner"></div>
+    <div class="cardText">
+    <span  style="color: #be2121;">Gmail</span><i class="fa-sharp fa-solid fa-envelope"  style="color: #be2121;"></i>
+    </div>
+  </div>
+</a>
+</footer>
 
 
 
@@ -534,6 +611,22 @@
       hide: true,
     },
   });
+  var swiper3 = new Swiper(".feb22", {
+      grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-20%", 0, -1],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
+      pagination: {
+          el: ".swiper-pagination",
+        },
+    });
 </script>
 </body>
 </html>
