@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>March ||</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,300&family=Roboto+Slab:wght@200;300;400&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://kit.fontawesome.com/069dd297de.js" crossorigin="anonymous"></script>
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <style>
+    body {
+      position: relative;
+    }
+
+    .fa-bars {
+      color: var(--greenPastel);
+      font-size: 2.5rem;
+      padding: 3px 5px;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 550px) {
+      .fa-bars {
+        top: 3%;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      z-index: 5;
+      transition-duration: 500ms;
+      transition-timing-function: ease-out;
+    }
+
+    nav ul {
+      width: 300px;
+      background-color: var(--black);
+      min-height: 100vh;
+      padding-left: 30px;
+      padding-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-around;
+      color: var(--white);
+    }
+
+    nav ul a {
+      width: calc(100% - 30px);
+    }
+
+    nav ul a li {
+      list-style-type: none;
+      font-size: 1.5rem;
+    }
+
+    .fa-x {
+      position: absolute;
+      right: 10%;
+      top: 5%;
+      color: var(--greenPastel);
+      font-size: 2rem;
+      padding: 3px 5px;
+      cursor: pointer;
+    }
+
+    .custom-shape-divider-top-1678255622 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .custom-shape-divider-top-1678255622 svg {
+      position: relative;
+      display: block;
+      width: calc(115% + 1.3px);
+      height: 92px;
+    }
+
+    .custom-shape-divider-top-1678255622 .shape-fill {
+      fill: #2B3625;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .containerNgSwiper {
+      height: 600px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--greenPastel);
+    }
+
+    .swiper-button-prev {
+      color: var(--greenLight);
+    }
+
+    .swiper-button-next {
+      color: var(--greenLight);
+    }
+
+    .swiper-pagination-progressbar {
+      background: var(--black);
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: var(--greenPastel);
+    }
+
+    .spacer {
+      aspect-ratio: 960/100;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .layer1 {
+      background-image: url(imagesMar/layer1.svg);
+    }
+
+    .layer2 {
+      background-image: url(imagesMar/layer2.svg);
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="marchHeader">
+    <div class="marchHeaderText">
+      <h1>March 2023</h1>
+      <p>Kunware nasummarize ko na</p>
+    </div>
+    <div class="marchHeaderTime">
+      <p id="time">11:05:01 PM</p>
+    </div>
+    <i class="fa-solid fa-bars" id="marchBars"></i>
+
+    <nav id="marchMenu">
+      <i class="fa-solid fa-x" id="marchX"></i>
+      <ul>
+        <a href="#">
+          <li>March 1</li>
+        </a>
+        <a href="#">
+          <li>March 2</li>
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="marchContainer">
+    <div class="custom-shape-divider-top-1678255622" style="z-index: 3;">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="marmar" style="z-index: 3;">
+      <h2>March 1: Langoy</h2>
+      <p>Langoy kame ng mga papi ko sa YWCA. Una nagkita muna kame sa bahay namen tas sabay sabay diretso sa UN.
+        Tinuruan lng naman ako ni Roland mag float at lumubog pero di ko magawa pareho HAHAHA. Mamamatay na lang talaga
+        sa araw ng activity. Isa pa, ganyan ba talaga mga lalaki HAHAHA grabe ok na ok lng maglakad ng nakaganyan lmao.
+        Solid niyo ho.</p>
+      <div class="containerNgSwiper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/1-swimming.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/1-swimming1.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/1-activity.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/1-rolander.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/1-picKo.jpg" loading="lazy" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer layer1"></div>
+  <div class="spacer layer2"></div>
+
+  <section class="marchContainer">
+    <div class="marmar">
+      <h2>March 2: Psychologist ang Ferson</h2>
+      <p>Nah, boring klase buti napagusapan na namin ni camille na gagala kame XD. BigBrew muna cuz why not. Tapos punta
+        kame SM palamig habang inuubos BigBrew then Museum. Si anteh di pa nakapasok don XD. So ayun naguluhan lng isip
+        namen sa loob. Arts ba naman eh wala kame non lmfao. Todo chika pa siya ng mga ganap tas natutunan niya sa
+        Psych. Hayyys mga psych talaga wala sa katinuan pag-iisip eh.</p>
+      <div class="containerNgSwiper">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-skool.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-skool1.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum1.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum2.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum3.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum4.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum5.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum6.jpg" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+              <img src="imagesMar/2-museum7.jpg" loading="lazy" />
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="spacer layer1"></div>
+<div class="spacer layer2"></div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+
+</html>

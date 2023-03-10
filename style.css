@@ -1459,3 +1459,87 @@ box-shadow:  35px 35px 70px #011117,
     text-decoration: none;
     color: #336ce6;
 }
+
+/*========================MAAAAAAAAAARCHHHHHHHH=========================================*/
+/*========================MAAAAAAAAAARCHHHHHHHH=========================================*/
+/*========================MAAAAAAAAAARCHHHHHHHH=========================================*/
+/*========================MAAAAAAAAAARCHHHHHHHH=========================================*/
+/*========================MAAAAAAAAAARCHHHHHHHH=========================================*/
+/*========================MAAAAAAAAAARCHHHHHHHH=========================================*/
+:root {
+    --greenPastel: rgb(112, 148, 88);
+    --greenLight: rgb(160, 196, 80);
+    --greenDark: rgb(48, 72, 32);
+    --gray: rgb(120, 132, 88);
+    --white: rgb(184, 188, 136);
+    --black: rgb(16, 24, 24);
+}
+.marchHeader {
+    width: 100%;
+    height: 100svh;
+    background: linear-gradient(45deg, rgb(120, 132, 88,0), rgb(160, 196, 80,.2)) ,url(imagesMar/marchBG.gif);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.marchHeaderText {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+.marchHeaderText h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-style: italic;
+    font-variant-caps: petite-caps;
+    color: var(--greenLight);
+    -webkit-text-stroke: 1px var(--greenDark);
+}
+.marchHeaderText p{
+    color: var(--greenLight);
+    font-style: oblique;
+}
+.marchHeaderTime {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+.marchHeaderTime p {
+    color: var(--greenLight);
+    -webkit-text-stroke:.5px var(--black);
+    font-size: 1.5rem;
+}
+@media (max-width: 550px) {
+    .marchHeaderTime {
+        top: 3%;
+        left: 5%;
+    }
+    .marchHeader {
+        background-position: left;
+    }
+}
+
+.marchContainer {
+    width: 100%;
+    background-color: var(--greenDark);
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+.marmar {
+    width: 90%;
+    margin: auto;
+}
+.marmar h2 {
+    font-size: 3rem;
+    font-style: italic;
+    font-variant: small-caps;
+    color: var(--white);
+    margin-bottom: 3%;
+}
+.marmar p {
+    color: var(--white);
+    text-indent: 3rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
